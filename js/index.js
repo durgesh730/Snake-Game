@@ -6,7 +6,7 @@ let lastPaintTime = 0;
 let score = 0;
 let speed = 4;
 let ArraySnake =[
-    { x:8, y:16}
+    { x:8, y:12}
 ];
 food = {x:6, y: 7};
 
@@ -30,7 +30,7 @@ function Collapse(snake){
          }
         }
          
-         if(snake[0].x >= 18 || snake[0].x <=0 || snake[0].y >= 18 || snake[0].y <=0)
+         if(snake[0].x >= 14 || snake[0].x <=0 || snake[0].y >= 14 || snake[0].y <=0)
          {
             return true;
          }
@@ -44,7 +44,7 @@ function WholeGame(){
         gameOver.play();
         Direction = {x: 0, y:0};
         alert ("Game Over. Press key to Play again!");
-        ArraySnake = [{x:13, y:15}];
+        ArraySnake = [{x:11, y:13}];
         score = 0;
     }
 
@@ -60,7 +60,7 @@ function WholeGame(){
         scoreBox.innerHTML = "Score:" + score;
        ArraySnake.unshift({x: ArraySnake[0].x + Direction.x, y: ArraySnake[0].y + Direction.y});
        let a= 2;
-       let b = 16;
+       let b = 12;
        food = {x: Math.round(a + (b-a)* Math.random()), y: Math.round(a+ (b-a)* Math.random())}
     } 
     

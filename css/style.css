@@ -1,46 +1,47 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Cabin+Condensed&family=Courgette&family=Fira+Sans&family=Fredoka+One&family=Inter:wght@300&family=Leckerli+One&family=Pacifico&family=Poppins:wght@500&family=Roboto&family=Roboto+Condensed&family=Rubik&family=Signika+Negative:wght@300&family=Source+Sans+Pro&family=Ubuntu:wght@300;400&family=Varela+Round&family=Yanone+Kaffeesatz&display=swap');
+
+body{
+    font-family: 'Poppins';
+    background-color: rgb(235, 231, 231);
     padding: 0;
     margin: 0;
 }
 
-body{
-    background-color: rgb(235, 231, 231);
-}
-
 .body{
+    margin-top: -60px ;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
 }
 
 #scoreBox{
     font-size: 39px;
-    font-weight: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #hiscoreBox{
     font-size: 39px;
-    font-weight: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #board{
+    margin: auto;
     background-color: white;
     box-shadow: 0px 5px 20px 0px rgb(63, 0, 80);
-    width: 90vmin;
-    height: 92vmin;
+    width: 80vmin;
+    height: 72vmin;
     display: grid;
-    grid-template-rows: repeat(18, 1fr);
-    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    grid-template-columns: repeat(14, 1fr);
 }
 
 .head{
    background-color:purple;
     transform: scale(1.02);
     border-radius: 20px;
+}
+
+.score{
+    margin: auto;
 }
 
 .snake{
@@ -55,5 +56,69 @@ body{
 
 .title{
     font-size: 3rem;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Navbar{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(rgb(42, 21, 80), rgb(62, 2, 62));
+    padding: .5rem 10rem;
+}
+
+.Navbar li{
+   list-style-type: none;
+   color: white;
+   font-size: 1.2rem;
+}
+
+.Navbar li a{
+       padding-left: 1rem;
+       color: white;
+       text-decoration: none;
+}
+
+.BottomNav{
+    margin-top: -40px ;
+    background: linear-gradient(rgb(42, 21, 80), rgb(62, 2, 62));
+    padding: .5rem;
+    text-align: center;
+    color: white;
+    font-size: .8rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .body{
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    #board{
+       margin-top: 3rem;
+    }
+    .score{
+        padding-top: 2rem;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .BottomNav{
+       display: none;
+    }
+    .Navbar{
+        padding: .5rem 1rem;
+    }
+    #board{
+        width: 90vmin;
+        height: 100vmin;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    #scoreBox{
+        font-size: 29px;
+    }
+    #hiscoreBox{
+        font-size: 29px;
+    }
 }
